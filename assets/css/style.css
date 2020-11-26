@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.color {
+    color: gray;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.block1 {
+    grid-area: block1;
+}
+
+.handbags {
+    grid-area: handbags;
+}
+
+.watch {
+    grid-area: watch;
+}
+
+.shoes {
+    grid-area: shoes;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "block1 block1 block1"
+                         "handbags watch shoes";
+}
+
+.cardtitle {
+   color: white;
+    font-size: 30px;
+}
+
+.card-img-overlay {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". full .";
+}
+
+.listgroup {
+    grid-area: footer;
+}
+
+.listgroup {
+    grid-area: footer;
+}
+
+.listgroup {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    grid-gap: 1px;
+    grid-template-areas: "group1 group2 group3 group4";
+}
+
+@media (max-width: 576px)  {
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "block1"
+                            "handbags"
+                             "watch"   
+                             "shoes";
+    }
+
+    .items-grid {
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .listgroup {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-areas: "group1"    
+                              "group2"
+                              "group3"     
+                              "group4";
+    }
+
+    
+
+    .grid3 {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". full .";
+    }
+
+
+    .items-img {
+        width: 100%;
+        padding: 5px;
+
+    }
+}
+
+@media (max-width: 992px)  {
+
+    .card-title,
+    .card-text {
+
+        font-size: 15px;
+    }
+}
+
